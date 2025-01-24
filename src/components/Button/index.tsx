@@ -7,6 +7,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export const Button = ({ children, full, ...props }: ButtonProps) => {
   return (
-    <button className={`p-1 px-5 h-fit rounded-xl bg-accent font-semibold text-white hover:opacity-75 cursor-pointer ${full ? 'w-full': ''}`} {...props}>{children}</button>
+    <button className={`py-1.5 px-6 h-fit rounded-xl text-lg bg-accent font-semibold text-white hover:opacity-75 cursor-pointer ${full ? 'w-full': ''}`} {...props}>{children}</button>
   );
 };
