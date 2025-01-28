@@ -3,6 +3,7 @@
 <div align="center">
   <img src="./public/images/image.png" alt="Resultado Fácil" width="600">
 </div>
+
 ## 🚀 Introducción
 
 Este proyecto es un **contador de resultados de partidos** desarrollado con **React**, **Tailwind CSS** y **Vite**. Surgió como una mejora a un simple contador, dándole una utilidad práctica: llevar el marcador de un partido en tiempo real. Además, se implementó **Storybook** para documentar y probar los componentes de manera aislada.
