@@ -14,8 +14,8 @@ export const Scoreboard = () => {
         </div>
       </div>
       <div className="flex justify-between px-5">
-        <Button onClick={() => handleAddPoint("A")}>Gol</Button>
-        <Button onClick={() => handleAddPoint("B")}>Gol</Button>
+        <Button id="teamA" onClick={() => handleAddPoint("A")}>Gol</Button>
+        <Button id="teamB" onClick={() => handleAddPoint("B")}>Gol</Button>
       </div>
     </div>
   );
