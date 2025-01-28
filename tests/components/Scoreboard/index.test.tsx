@@ -11,7 +11,7 @@ describe('<Scoreboard/>',()=>{
         const goalButtons = await screen.findAllByRole('button')
         expect(teamNames.length).toBe(2)
         expect(teamScores.length).toBe(2)
-        expect(goalButtons.length).toBe(2)
+        expect(goalButtons.length).toBe(3)
     })
 
     test('should add 1 in teamA score.',async ()=>{
@@ -26,9 +26,21 @@ describe('<Scoreboard/>',()=>{
     test('should add 1 in teamB score.',async ()=>{
         render(<Scoreboard/>)
         const teamBScores = (await screen.findAllByRole('paragraph'))[1]
-        const teamBGoalButton = (await screen.findAllByRole('button'))[1]
+        const teamBGoalButton = (await screen.findAllByRole('button'))[2]
         expect(parseInt(teamBScores.textContent as string)).toBe(0)
         await userEvent.click(teamBGoalButton)
         expect(parseInt(teamBScores.textContent as string)).toBe(1)  
+    })
+    
+    test('should reset after add scores.',async ()=>{
+        render(<Scoreboard/>)
+        const teamAScores = (await screen.findAllByRole('paragraph'))[0]
+        const buttons = await screen.findAllByRole('button')
+        const teamAGoalButton = buttons[0]
+        const resetButton = buttons[1]
+        await userEvent.click(teamAGoalButton)
+        expect(parseInt(teamAScores.textContent as string)).toBe(1)  
+        await userEvent.click(resetButton)
+        expect(parseInt(teamAScores.textContent as string)).toBe(0)
     })
 })

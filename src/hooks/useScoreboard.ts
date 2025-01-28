@@ -11,9 +11,16 @@ export const useScoreboard = () => {
       setScoreTeamB(scoreTeamB + 1);
     }
   };
+
+  const handleResetScore = ()=>{
+    setScoreTeamA(0)
+    setScoreTeamB(0)
+  }
+
   return {
     scoreTeamA,
     scoreTeamB,
-    handleAddPoint
+    handleAddPoint,
+    handleResetScore
   };
 };
