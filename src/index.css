@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-[#e4f2e3]
+  @apply bg-primary;
 }
 
-@theme{
-  --color-primary: #12131A;
-  --color-secondary: #1C1C25;
-  --color-accent: #3B4DF6;
+@theme {
+  --color-primary: #12131a;
+  --color-secondary: #1c1c25;
+  --color-accent: #3b4df6;
+  --color-subtle: "#2D2D3A";
+  --color-soft: "#A0A0B0";
 }
