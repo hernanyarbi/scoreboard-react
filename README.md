@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Contador de Resultados de Partidos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="./public/images/image.png" alt="Resultado Fácil" width="600">
+</div>
+## 🚀 Introducción
 
-Currently, two official plugins are available:
+Este proyecto es un **contador de resultados de partidos** desarrollado con **React**, **Tailwind CSS** y **Vite**. Surgió como una mejora a un simple contador, dándole una utilidad práctica: llevar el marcador de un partido en tiempo real. Además, se implementó **Storybook** para documentar y probar los componentes de manera aislada.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El objetivo principal fue mejorar mis habilidades en:
+- **Testing**: Uso de **Vitest** para pruebas unitarias.
+- **Documentación**: Implementación de **Storybook**.
+- **Diseño**: Uso de **Tailwind CSS** para estilos rápidos y responsivos.
+- **React**: Buenas prácticas y estructura de componentes.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠️ Tecnologías Usadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React**: Biblioteca principal para la construcción de la interfaz.
+- **Tailwind CSS**: Framework de estilos para diseño rápido y responsivo.
+- **Vite**: Herramienta de construcción para desarrollo rápido.
+- **Vitest**: Framework de testing para pruebas unitarias.
+- **Storybook**: Herramienta para documentar y probar componentes de manera aislada.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 📦 Instalación y pruebas
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clona el repositorio:
+   `git clone https://github.com/hernanyarbi/scoreboard-react.git`
+2. Ve a la carpeta del proyecto:
+  `cd scoreboard-react`
+3. Instala dependencias:
+  `yarn` o `npm i`
+4. Levantar el proyecto: 
+  `yarn dev` o `npm run dev`
+5. Correr los tests:
+  `yarn test:unit` o `npm run test:unit`
+6. Levantar la documentación de storybook:
+  `yarn storybook` o `npm run storybook`
+  
